@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="main">
+        <div class="add_product">
+            <form id="form">
+                <div class="container">
+                    <h2>Product Management</h2>
+                    <div class="input-control">
+
+                    </div>
+                    <div class="input-control">
+                        <h5 class="title"></h5>
+                        <input id="name_product" type="text" placeholder="Name Product">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <h5 class="title"></h5>
+                        <input id="price_product" min="1" type="number" placeholder="Price Product">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <h5 class="title"></h5>
+                        <input id="discount_product" min="1" max="100" type="number" placeholder="Discount Product">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <h5 class="title"></h5>
+                        <input id="amount_product" min="1" type="number" placeholder="Amount Product">
+                        <div class="error"></div>
+                    </div>
+                    <h4>Size</h4>
+                    <div class="set_size">
+                        <div class="input-control">
+                            <ul>
+                                <li>
+                                    <input value="S" name="size" type="checkbox">
+                                    <label>S</label>
+                                </li>
+                                <li>
+                                    <input value="M" name="size" type="checkbox">
+                                    <label>M</label>
+                                </li>
+                                <li>
+                                    <input value="L" name="size" type="checkbox">
+                                    <label>L</label>
+                                </li>
+                                <li>
+                                    <input value="Xl" type="checkbox" name="size">
+                                    <label>XL</label>
+                                </li>
+                                <li>
+                                    <input value="2XL" type="checkbox" name="size">
+                                    <label>2XL</label>
+                                </li>
+                                <li>
+                                    <input value="3XL" name="size" type="checkbox">
+                                    <label>3XL</label>
+                                </li>
+                                <li>
+                                    <input value="4XL" name="size" type="checkbox">
+                                    <label>4XL</label>
+                                </li>
+                                <li>
+                                    <input value="5XL" name="size" type="checkbox">
+                                    <label>5XL</label>
+                                </li>
+                            </ul>
+                            <div class="error"></div>
+
+                        </div>
+                    </div>
+
+                    <button id="btn_add_product" type="submit"><span>Add Product</span></button>
+                </div>
+            </form>
+        </div>
+        <div class="display_product">
+            <div class="search">
+                <input id="search_product" type="text">
+                <button id="btn_search" onclick="searchProduct()">Search</button>
+            </div>
+            <div class="table_display_product">
+                <table id="keywords">
+                    <thead>
+                        <tr>
+                            <th>TT</th>
+                            <th>ID</th>
+                            <th>Name </th>
+                            <th>Price</th>
+                            <th>Discount </th>
+                            <th>Amount</th>
+                            <th>Size</th>
+                            <th>Function</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_product"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="Product.js"></script>
+    <script src="ProductManagement.js"></script>
+    <script src="Main.js"></script>
+</body>
+
+</html>
